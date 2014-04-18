@@ -31,11 +31,11 @@
 # edit these variables to correspond to your setup:
 #
 # fullpath contains the folder where the script is run from. omit the last /.
-fullpath="/var/www/shell"
+fullpath="absolute path of the folder where the script is"
 # data contains the data dir. make sure data is in the folder mentioned under fullpath
-datadir="data"
+datadir="relative path of the folder, where the data is"
 # sitename. just what shows up as page title
-sitename="shellneko"
+sitename="name of your site"
 # 
 # contact: neko@koneko.at for questions.
 #
@@ -95,8 +95,7 @@ insHead(){
 echo "<!DOCTYPE html>"
 echo "<html>"
 echo "<!-- minefield project A-XC16, proudly made with bash and html -->"
-echo "<!-- (C) 2013 nekosilvertail, cc-sa -->"
-echo "<!-- documents: dunno. complaints go to neko@koneko.at -->"
+echo "<!-- (C) 2014 nekosilvertail, cc-sa -->"
 echo "<!-- generated: $(date +%s)U -->"
 echo "<head>"
 echo "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>"
@@ -108,17 +107,18 @@ echo "</head>"
 insBody(){
 echo "<body>"
 echo "<div class='body'>"
-echo "<h2>Shell script collection</h2>"
+#enter a title here
+echo "<h2>title~</h2>"
 echo "<br><hr><br>"
 
 insFileList
 }
 
 insFooter(){
-echo "<p>anything to add? anything you want to tell me? drop a line: =^__^='~~@koneko.at | Zugriffe -> $(cat $fullpath/counter) | last update -> $(cat $fullpath/update) </p>"
+#insert your own stuff here..
+echo "<p>footer message | Access-Counter -> $(cat $fullpath/counter) | last update -> $(cat $fullpath/update) </p>"
 echo "<hr>"
 
-echo "<img src='http://koneko.at/neko/konekomewb.png' class='img' alt='koneko logo, a neko girl with usb tail' />"
 echo "</body>"
 echo "</html>"
 }
